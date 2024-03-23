@@ -34,7 +34,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         source: "main"
         target: ~/
-
+        
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1.0.3
       with:
