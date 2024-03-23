@@ -21,6 +21,7 @@ jobs:
       with:
         go-version: '1.17'
 
+
     - name: Export
       run: export BOT_TOKEN=${{ secrets.BOT_TOKEN }}
       
