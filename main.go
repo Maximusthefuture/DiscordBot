@@ -76,4 +76,21 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			return
 		}
 	}
+
+	if m.Content == "Кто лох" || m.Content == "кто лох" {
+		_, err := s.ChannelMessageSend(m.ChannelID, "Ты лох <:6880pepe17:1063153862409736303>")
+		if err != nil {
+			return
+		}
+	}
+
+	if m.Content == "осуждаю" {
+		count := 1
+		count++
+		res := fmt.Sprintf("Осудили уже %s раз", count)
+		_, err := s.ChannelMessageSend(m.ChannelID, res)
+		if err != nil {
+			return
+		}
+	}
 }
