@@ -83,11 +83,10 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			return
 		}
 	}
-
+	var count int
 	if m.Content == "осуждаю" {
-		count := 1
 		count++
-		res := fmt.Sprintf("Осудили уже %s раз", count)
+		res := fmt.Sprintf("Осудили уже %d раз", count)
 		_, err := s.ChannelMessageSend(m.ChannelID, res)
 		if err != nil {
 			return
