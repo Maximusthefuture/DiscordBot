@@ -60,26 +60,19 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	if m.Content == "лох?" {
 
-		//Call the KuteGo API and retrieve our cute Dr Who Gopher
-		//response, err := http.Get(KuteGoAPIURL + "/gopher/" + "dr-who")
-		//if err != nil {
-		//	fmt.Println(err)
-		//}
-		//defer response.Body.Close()
-		//
-		//if response.StatusCode == 200 {
-		//	_, err = s.ChannelFileSend(m.ChannelID, "dr-who.png", response.Body)
-		//	if err != nil {
-		//		fmt.Println(err)
-		//	}
-		//} else {
-		//	fmt.Println("Error: Can't get dr-who Gopher! :-(")
 		_, err := s.ChannelMessageSend(m.ChannelID, "Сам лох")
 		_, err2 := s.ChannelMessageSend(m.ChannelID, "<:6880pepe17:1063153862409736303>")
 		if err != nil {
 			return
 		}
 		if err2 != nil {
+			return
+		}
+	}
+
+	if m.Content == "Герман" || m.Content == "герман" {
+		_, err := s.ChannelMessageSend(m.ChannelID, "<:6880pepe17:1063153862409736303>")
+		if err != nil {
 			return
 		}
 	}
