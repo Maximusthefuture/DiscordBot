@@ -22,7 +22,7 @@ jobs:
 
 
     - name: Export
-      run: export BOT_TOKEN=${{ secrets.BOT_TOKEN }}
+      run: export BOT_TOKEN=${{ Secrets.BOT_TOKEN }}
       
     - name: Build
       run: go build -v main.go
@@ -32,6 +32,6 @@ jobs:
       with:
         host: ssh-testing.alwaysdata.net
         username: testing_test
-        password: ${{ secrets.PASSWORD }}
+        password: ${{ Secrets.PASSWORD }}
         source: "main"
         target: ~/
