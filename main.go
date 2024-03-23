@@ -50,6 +50,8 @@ func main() {
 	dg.Close()
 }
 
+var count int
+
 func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	// Ignore all messages created by the bot itself
@@ -83,7 +85,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			return
 		}
 	}
-	var count int
+
 	if m.Content == "осуждаю" {
 		count++
 		res := fmt.Sprintf("Осудили уже %d раз", count)
