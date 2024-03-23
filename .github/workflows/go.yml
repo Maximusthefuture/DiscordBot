@@ -44,3 +44,5 @@ jobs:
         script: |
           export BOT_TOKEN=${{ secrets.BOT_TOKEN }} 
           ./main
+    - name: something
+      run: echo 'hello'
